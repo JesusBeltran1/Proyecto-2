@@ -75,18 +75,18 @@ void draw() {
 }
 
 void mousePressed(){
-  if (mouseButton == LEFT) {
+  if (mouseButton == LEFT && pantalla==1) {
     stickman.move(new Vec2(mouseX,mouseY));
     roca.angular(0.5);
   }
 }
   
 void keyReleased() {
-  if(key == 'a' || key == 'A'){
+  if((key == 'a' || key == 'A') && pantalla==0){
     pantalla=1;
-  } else if(key == 'b' || key == 'B'){
+  } else if((key == 'b' || key == 'B') && pantalla==1){
     pantalla=2;
-  } else if(key == 'c' || key == 'C'){
+  } else if((key == 'c' || key == 'C') && pantalla==2){
     exit();
   }
 }
